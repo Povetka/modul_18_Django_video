@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <link rel = 'stylesheet' type="text/css" href = '{% static "style.css" %}'>
+</head>
+<body>
+    <h1>{{ text }}</h1>
+    <h1>{{ name }}</h1>
+        {% for i in list %}
+        <p>{{ i }}</p>
+    {% endfor %}
+
+    {% for i in list %}
+        <p>{{ i|upper }}</p>
+    {% endfor %}
+
+    {% for i in list %}
+        <p>{{ i|title }}</p>
+    {% endfor %}
+
+    {% for i in list_int %}
+        <p>{{ i|floatformat:3 }}</p>
+    {% endfor %}
+
+    {% if len_list < 4 %}
+        <h2>OK</h2>
+    {% else %}
+        <h2>Not OK</h2>
+    {% endif %}
+
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>{{ title }}</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <h1>{{ text }}</h1>-->
+<!--    <h1>Заголовок 1</h1>-->
+<!--    <h2>Заголовок 2</h2>-->
+<!--    <h3>Заголовок 3</h3>-->
+<!--    <p>абракадабра</p>-->
+<!--    <p>абракадабр</p>-->
+<!--    <p>буквы воруют?</p>-->
+<!--    <p>абр</p>-->
+<!--    <p>аб</p>-->
+<!--    <p>а</p>-->
+<!--    <button><h1>НЕ НАЖИМАЙ!</h1></button>-->
+<!--    <a href="http://www.astro.spbu.ru/staff/afk/Teaching/Help/Tegs.htm">текст ссылки</a>-->
+<!--    <ul>-->
+<!--        <li>пункт1</li>-->
+<!--        <li>пункт2</li>-->
+<!--        <li>пункт3</li>-->
+<!--    </ul>-->
+<!--</body>-->
+<!--</html>-->
